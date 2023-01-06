@@ -8,7 +8,16 @@
     @livewireStyles
 </head>
 <body>
-    <livewire:openai-form /> 
+    <form action="{{ route('openai_text') }}" method="POST">
+        @csrf
+        <h1>Open AI</h1>
+        <label for="texto">Escribe tu frase</label>
+        <br>
+        <textarea name="frase_text" id="texto" cols="30" rows="10" class="form-control"></textarea>
+        <br>
+        <button type="submit">Consultar</button>
+    </form>
+    {{-- <livewire:openai-form />  --}}
     @livewireScripts
 </body>
 </html>
