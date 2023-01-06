@@ -30,6 +30,7 @@ class OpenaiForm extends Component
         $result = OpenAI::completions()->create([
             'model' => 'text-curie-001',
             'prompt' => 'cuantos dioses conoce la humanidad según sus creencias e historias?',
+            'max_tokens' => 250,
         ]);
         dd($result);
         echo "<h1>".$result['choices'][0]['text']."</h1>";
