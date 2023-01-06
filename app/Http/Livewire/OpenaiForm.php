@@ -7,10 +7,10 @@ use OpenAI\Laravel\Facades\OpenAI;
 
 class OpenaiForm extends Component
 {
-    public function mount()
-    {
-        $this->getOpenAI();
-    }
+    public $result_text;
+    public $frase_text;
+
+
     public function render()
     {
         return view('livewire.openai-form');
@@ -21,10 +21,9 @@ class OpenaiForm extends Component
         $apiKey = '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';
         $result = OpenAI::completions()->create([
             'model' => 'text-davinci-003',
-            'prompt' => 'PHP is',
+            'prompt' => $this->frase_text,
         ]);
 
-        $text = $result['choices'][0]['text'];
-        dd($text);
+        $this->result_text = $result['choices'][0]['text'];
     }
 }
