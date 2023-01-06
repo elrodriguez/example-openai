@@ -10,7 +10,7 @@ class OpenaiForm extends Component
     public $result_text = 'resultado';
     public $frase_text;
 
-    public function mount($ruteado)
+    public function mount()
     {
         $this->getOpenAI();
     }
