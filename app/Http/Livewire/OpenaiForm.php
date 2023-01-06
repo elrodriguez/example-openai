@@ -31,7 +31,7 @@ class OpenaiForm extends Component
             'model' => 'text-curie-001',
             'prompt' => 'cuantos dioses conoce la humanidad según sus creencias e historias?',
         ]);
-        //dd($result['choices'][0]['text']);
+        dd($result['choices']);
 
         $this->result_text = $result['choices'][0]['text'];
     }
