@@ -24,6 +24,7 @@ class OpenaiForm extends Component
     }
     public function getOpenAI()
     {
+        echo "<h1> por la pucta madre </h1>";
         $apiKey = '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';
         $consulta = $this->frase_text;
         $result = OpenAI::completions()->create([
