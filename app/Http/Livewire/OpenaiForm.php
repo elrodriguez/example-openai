@@ -8,11 +8,11 @@ use OpenAI\Laravel\Facades\OpenAI;
 class OpenaiForm extends Component
 {
     public $result_text;
-    public $frase_text;
+    public $frase_text="que bonita vecindad es la vecindad del chavo no vale medio centavo pero es linda de verdad  de que canción es esa letra?";
 
     public function mount()
     {
-        //$this->getOpenAI();
+        $this->getOpenAI();
     }
     public function render()
     {
