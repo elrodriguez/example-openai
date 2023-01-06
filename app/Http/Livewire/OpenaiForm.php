@@ -25,9 +25,10 @@ class OpenaiForm extends Component
     public function getOpenAI()
     {
         $apiKey = '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';
+        $consulta = $this->frase_text;
         $result = OpenAI::completions()->create([
             'model' => 'text-davinci-003',
-            'prompt' => $this->frase_text,
+            'prompt' => $consulta,
         ]);
         //dd($result['choices'][0]['text']);
 
