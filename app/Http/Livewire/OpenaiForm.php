@@ -28,7 +28,7 @@ class OpenaiForm extends Component
         $apiKey = env('OPENAI_API_KEY');
         $consulta = $this->frase_text;
         $result = OpenAI::completions()->create([
-            'model' => 'text-curie-001',
+            'model' => 'text-davinci-003',
             'prompt' => 'parafrasea esto: "La odontalgia puede derivarse por carácter de tipo multifactorial, existiendo numerosos componentes, causas y/o circunstancias por las que puede originarse. Entre ellos, se encuentran los siguientes:
 
                 Pulpitis
@@ -78,7 +78,7 @@ class OpenaiForm extends Component
             Es la inflamación del tejido entre el diente y el colgajo de encía que lo circunda. Aparece de manera recurrente y con mayor frecuencia en una muela del juicio del sector inferior que está por erupcionar.
             
             No obstante, ante cualquier eventualidad, lo esencial es que acudas a tu dentista lo antes posible. Si acudes nada más sientas esta patología tendrá la posibilidad de diagnosticar el origen de la odontalgia y poner solución en su etapa inicial con un tratamiento menos agresivo."',
-            'max_tokens' => 250,
+            'max_tokens' => 2800,
         ]);
         dd($result);
         echo "<h1>".$result['choices'][0]['text']."</h1>";
