@@ -7,4 +7,4 @@
     <button wire:click="getOpenAI" type="button">Consultar</button>
     <br><br>
     <p>{{ $result_text }}</p> 
-</div
+</div>
