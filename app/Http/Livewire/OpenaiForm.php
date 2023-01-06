@@ -21,9 +21,9 @@ class OpenaiForm extends Component
         $apiKey = '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';
         $result = OpenAI::completions()->create([
             'model' => 'text-davinci-003',
-            'prompt' => $this->frase_text,
+            'prompt' => 'PHP is',
         ]);
-
+        dd($result['choices'][0]['text']);
         $this->result_text = $result['choices'][0]['text'];
     }
 }
