@@ -28,7 +28,7 @@ class OpenaiForm extends Component
         $apiKey = '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';
         $consulta = $this->frase_text;
         $result = OpenAI::completions()->create([
-            'model' => 'text-davinci-003',
+            'model' => 'text-curie-001',
             'prompt' => 'cuantos dioses conoce la humanidad según sus creencias e historias?',
         ]);
         //dd($result['choices'][0]['text']);
