@@ -30,6 +30,7 @@ class OpenaiForm extends Component
             'prompt' => $this->frase_text,
         ]);
         //dd($result['choices'][0]['text']);
+
         $this->result_text = $result['choices'][0]['text'];
     }
 }
