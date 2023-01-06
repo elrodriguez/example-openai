@@ -12,7 +12,7 @@ class OpenaiForm extends Component
 
     public function mount()
     {
-        $this->getOpenAI();
+        //$this->getOpenAI();
     }
     public function render()
     {
