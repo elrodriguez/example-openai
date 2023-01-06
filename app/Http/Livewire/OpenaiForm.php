@@ -33,6 +33,6 @@ class OpenaiForm extends Component
         ]);
         // dd($result['choices']);
         echo "<h1>".$result['choices'][0]['text']."</h1>";
-        $this->result_text = $result['choices'][0]['text'];
+        $this->result_text = $result;
     }
 }
