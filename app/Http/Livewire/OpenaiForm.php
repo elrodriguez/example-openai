@@ -10,7 +10,10 @@ class OpenaiForm extends Component
     public $result_text;
     public $frase_text;
 
-
+    public function mount()
+    {
+        $this->getOpenAI();
+    }
     public function render()
     {
         return view('livewire.openai-form');
