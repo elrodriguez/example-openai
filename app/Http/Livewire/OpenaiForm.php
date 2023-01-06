@@ -26,7 +26,7 @@ class OpenaiForm extends Component
             'model' => 'text-davinci-003',
             'prompt' => (string)$this->frase_text,
         ]);
-        dd($result['choices'][0]['text']);
+        dd($result);
         $this->result_text = $result['choices'][0]['text'];
     }
 }
