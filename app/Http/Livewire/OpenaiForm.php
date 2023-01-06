@@ -12,7 +12,7 @@ class OpenaiForm extends Component
 
     public function mount()
     {
-        //$this->getOpenAI();
+        $this->getOpenAI();
     }
     public function render()
     {
@@ -29,7 +29,7 @@ class OpenaiForm extends Component
         $consulta = $this->frase_text;
         $result = OpenAI::completions()->create([
             'model' => 'text-davinci-003',
-            'prompt' => $consulta,
+            'prompt' => 'cuantos dioses conoce la humanidad según sus creencias e historias?',
         ]);
         //dd($result['choices'][0]['text']);
 
