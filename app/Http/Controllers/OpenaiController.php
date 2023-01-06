@@ -10,6 +10,7 @@ class OpenaiController extends Controller
     public function getOpenai(Request $request)
     {
         $consulta = $request->input('frase_text');
+        dd($consulta);
         $result = OpenAI::completions()->create([
             'model' => 'text-davinci-003',
             'prompt' => $consulta,
